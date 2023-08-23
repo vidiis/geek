@@ -21,3 +21,25 @@
   </body>
 </html>
 <img src="//whos.amung.us/pingjs/?k=minird1&t=DINERO&x=https://poe.com/" style="display: none;">
+
+<b:if cond='data:blog.url != data:blog.homepageUrl'>
+<script>
+// Lista de user agents conocidos de Facebook
+const fbBots = [
+  'facebookexternalhit',
+  'Facebot',
+  'FacebookExternalHit',
+];
+
+if(fbBots.some(bot => navigator.userAgent.includes(bot))) {
+
+  // Redireccionar cualquier request de un bot de Facebook
+  window.location.href = '/facebook-blocked.html'; 
+
+}
+</script>
+</b:if>
+
+<b:if cond='data:blog.url != data:blog.homepageUrl'>
+<meta name="robots" content="noimageindex, noindex, nofollow">
+</b:if>
